@@ -1,9 +1,11 @@
 version: 1.1
 type: install
 name: Open Liberty in Kubernetes
-baseUrl: https://github.com/jelastic-jps/openliberty/raw/master
+baseUrl: https://github.com/vlobzakov/openliberty/raw/master
 logo: /images/open-liberty-logo.png
-description: Example of Open Liberty deployment on top of Kubernetes cluster. 
+description: 
+	text: /texts/description.md
+	short: Example of Open Liberty deployment on top of Kubernetes cluster.
 
 settings:
   fields:
@@ -54,5 +56,5 @@ onInstall:
   - setGlobals:
         startPage: ${response.startPage}        
 startPage: ${globals.startPage}
-success: |
-  Enjoy with OpenLiberty by URL: [${globals.startPage}](${globals.startPage}) 
+success: 
+	/texts/success.md
